@@ -1,0 +1,11 @@
+{
+  "name": "trillo",
+  "version": "1.0.0",
+  "description": "Landing page for Trillo",
+  "main": "index.js",
+  
+    
+  "author": "Fabio Circià",
+  "license": "ISC"
+  
+}
