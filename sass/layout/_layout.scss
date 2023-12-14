@@ -7,22 +7,21 @@
 }
 
 .header {
-    height: 7rem;
-    background-color: white ;
-    border-bottom: var(--color-grey-light-2);
+  height: 7rem;
+  background-color: white;
+  border-bottom: var(--color-grey-light-2);
 }
 
 .content {
-    display: flex;
+  display: flex;
 }
 
 .sidebar {
-    background-color: var(--color-grey-dark-1);
-    flex: 0 0 18%;
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
 }
 
 .hotel-view {
-    background-color: white ;
-    flex: 1;
-
+  background-color: white;
+  flex: 1;
 }
