@@ -15,22 +15,55 @@
   </head>
   <body>
     <div class="container">
+
+      <!-- HEADER SECTION -->
       <header class="header">
-<div class="header__logo-box">
-  <img src="img/logo.png" alt="logo" class="header__logo-image">
-</div>
-<form action="#" class="header__form">
-  <input type="text" class="header__form--input" placeholder="Search hotels">
-  <button class="header__form--button">
-    <svg class="search__icon"></svg>
-  </button>
-</form>
+        <div class="header__logo-box">
+          <img src="img/logo.png" alt="logo" class="header__logo-box--image" />
+        </div>
+
+        <!--  SEARCH BAR -->
+        <form action="#" class="header__form-search">
+          <input
+            type="text"
+            class="header__form-search--input"
+            placeholder="Search hotels"
+          />
+          <button class="header__form-search--button">
+            <svg class="header__form-search--icon">
+              <!-- use serve ad includere una svg dal file sprite -->
+              <use xlink:href="icons/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+
+          <nav class="header__user-nav">
+            <div class="header__user-nav__icon-box">
+              <svg class="header__user-nav-icon">
+                <use xlink:href="icons/sprite.svg#icon-bookmark"></use>
+              </svg>
+              <span class="header__user-nav__notification">7</span>
+            </div>
+            <div class="header__user-nav__icon-box">
+              <svg class="header__user-nav-icon">
+                <use xlink:href="icons/sprite.svg#icon-chat"></use>
+              </svg>
+              <span class="header__user-nav__notification">13</span>
+            </div>
+            <div class="header__user-nav__user">
+              <img
+                src="img/user.jpg"
+                alt="User photo"
+                class="header__user-nav__user--photo"
+              />
+              <span class="header__user-nav__user--name"> Fabio </span>
+            </div>
+          </nav>
       </header>
       <div class="content">
         <nav class="sidebar">Navigation</nav>
-        <main class="hotel-view">
-          hotel view
-        </main>
+        <main class="hotel-view">hotel view</main>
       </div>
     </div>
   </body>

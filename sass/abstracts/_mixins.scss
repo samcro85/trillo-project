@@ -1,3 +1,9 @@
 @mixin center($vertical-margin){
     margin: $vertical-margin auto
 }
+
+/// -- FORMATTAZIONE ICONE --
+@mixin icon-style($width, $height){
+    width: $width;
+    height: $height;
+}
