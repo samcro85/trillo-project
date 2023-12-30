@@ -264,8 +264,17 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  & span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+  }
+
+  &:hover span {
+    margin-left: 0.8rem;
   }
 
   &:focus {
@@ -276,3 +285,149 @@
 
 ////////// ------ DETAIL----- /////////////
 
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+
+  &__description {
+    font-size: 1.4rem;
+
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+
+    &__paragraph:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+
+    &__list {
+      list-style: none;
+      margin: 3rem 0;
+      padding: 3rem 0;
+      border-top: var(--line);
+      border-bottom: var(--line);
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 1rem;
+          width: 1rem;
+          margin-right: 0.7rem;
+
+          // Metodo per vecchi browser
+          // background-image: url("../img/chevron-thin-right.svg");
+          // background-size: cover;
+
+          // New browser
+          background-color: var(--color-primary);
+          mask-image: url(../img/chevron-thin-right.svg);
+          mask-size: cover;
+        }
+      }
+    }
+
+    &__recommend {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      color: var(--color-grey-dark-3);
+
+      &-count {
+        margin-right: auto;
+      }
+
+      &-friends {
+        &--photo {
+          box-sizing: content-box;
+          height: 4rem;
+          width: 4rem;
+          border-radius: 50%;
+          border: 3px solid white;
+
+          &:not(:last-child) {
+            margin-right: -1.15rem;
+          }
+        }
+      }
+    }
+  }
+
+  ////////// ----- USER-REVIEW ---- ///////////
+  &__user-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__review {
+      position: relative;
+      background-color: white;
+      flex: 1;
+      box-shadow: var(--shadow-light);
+      padding: 3rem;
+      margin-bottom: 3.5rem;
+      overflow: hidden;
+
+      &__quote {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: inherit;
+      }
+
+      &__user {
+        display: flex;
+        align-items: center;
+        &--photo {
+          @include icon-style(4.5rem, 4.5rem);
+          border-radius: 50%;
+          margin-right: 1.5rem;
+        }
+
+        &__box {
+          margin-right: auto;
+
+          &--name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+          }
+
+          &--date {
+            font-size: 1rem;
+            color: var(--color-grey-dark-3);
+          }
+        }
+
+        &__rating {
+          color: var(--color-primary);
+          font-size: 2.2rem;
+          font-weight: 300;
+        }
+      }
+
+      &::before {
+        display: block;
+        content: "\201C";
+        line-height: 1;
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 0;
+      }
+    }
+  }
+}
