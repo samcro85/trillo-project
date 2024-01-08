@@ -17,10 +17,16 @@
   --color-grey-dark-3: #999;
 
   // --- SHADOWS ---
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
---shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
   // --- BORDERS ---
   --line: 1px solid var(--color-grey-light-2);
 }
+
+//////// ---- SASS MEDIA QUERY VARIABLES ---- ////////
+$breakpoint-largest: 75em;
+$breakpoint-large: 68.75em;
+$breakpoint-md: 56.25em;
+$breakpoint-sm: 37.5em;
+$breakpoint-xs: 31.25em;
